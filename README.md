@@ -26,13 +26,27 @@ Suspicious Head movement detection using head pose estimation. For the head pose
     ![image](https://user-images.githubusercontent.com/33194443/175760218-4e61da30-71b6-4d2a-8ca4-ddc4c2ec5df0.png)
 
 
+## 2. Initialization
+Downloading weights
+```bash
+# for yolov4
+wget https://github.com/PINTO0309/DMHead/releases/download/1.1.2/yolov4_headdetection_480x640_post.onnx
+wget https://github.com/PINTO0309/DMHead/releases/download/1.1.2/dmhead_mask_Nx3x224x224.onnx
+wget https://github.com/PINTO0309/DMHead/releases/download/1.1.2/dmhead_nomask_Nx3x224x224.onnx
+
+# for yolorv7-tiny
+wget https://github.com/PINTO0309/DMHead/releases/download/1.1.2/yolov7_tiny_head_0.768_post_480x640.onnx
+wget https://github.com/PINTO0309/DMHead/releases/download/1.1.2/dmhead_mask_Nx3x224x224.onnx
+wget https://github.com/PINTO0309/DMHead/releases/download/1.1.2/dmhead_nomask_Nx3x224x224.onnx
+```
+
 ## 2. Inference Test
 
 ```bash
 # for yolov4
 python track_v4.py \
 
-# for yolov7
+# for yolov7-tiny
 python track_v7.py \
 
 [-h] \
@@ -64,3 +78,4 @@ optional arguments:
 3. https://github.com/Ascend-Research/HeadPoseEstimation-WHENet
 4. https://github.com/PINTO0309/Face_Mask_Augmentation
 5. https://github.com/PINTO0309/DMHead
+
